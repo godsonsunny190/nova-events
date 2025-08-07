@@ -1,0 +1,213 @@
+// HERO SECTION STYLE
+
+.hero {
+
+    &_video {
+        video {
+            object-fit: cover;
+            height: 100vh;
+            width: 100%;
+        }
+    }
+}
+
+// SERVICE SECTION STYLE
+.service {
+    margin-top: 80px;
+
+    &_grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        margin-top: 40px;
+    }
+
+    &_item {
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            .service_content {
+                opacity: 1;
+                transition: all .2s;
+                transform: scale(1);
+            }
+
+            .service_image img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &_image {
+        img {
+            transition: all 0.5s ease 0s;
+            height: 430px;
+        }
+    }
+
+    &_content {
+        opacity: 0;
+        transition: all .2s;
+        transform: scale(0.9);
+        max-width: unset;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        padding: 30px;
+        background-color: rgb(0 0 0 / 70%);
+        will-change: opacity;
+
+        h4 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.projects {
+    margin-top: 100px;
+
+    &_slider {
+        margin-top: 40px;
+
+        @include media-breakpoint-down(md) {
+            margin-top: 20px;
+        }
+
+        .slick-slide {
+            margin: 0 15px;
+        }
+    }
+
+    &_item {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+
+        &:hover {
+            img {
+                filter: brightness(70%);
+                transform: scale(1.09, 1.09);
+                transition: all 1s ease;
+            }
+
+            .projects_content {
+                bottom: 0;
+            }
+
+            .line {
+                width: 100%;
+                transition: all 0.8s ease-in-out;
+            }
+
+            .arrow {
+                filter: brightness(0) saturate(100%) invert(70%) sepia(37%) saturate(310%) hue-rotate(352deg) brightness(90%) contrast(90%);
+            }
+        }
+
+        img {
+            transition: all 0.5s;
+        }
+
+        .line {
+            text-align: center;
+            height: 1px;
+            width: 60px;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease-in-out;
+            margin: 0 auto 30px;
+        }
+    }
+
+    &_content {
+        padding: 30px 15px;
+        position: absolute;
+        bottom: -58px;
+        left: 0;
+        width: 100%;
+        transition: all 0.3s;
+        text-align: center;
+        z-index: 20;
+        background: linear-gradient(to bottom,
+                transparent 0,
+                rgba(0, 0, 0, 0.01) 2%,
+                rgba(0, 0, 0, 0.75) 90%);
+
+        h6 {
+            color: #b19777;
+            font-size: 13px;
+            font-weight: 400;
+            margin: 0 0 10px 0;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        h5 {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+            margin: 0 0 10px 0;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .arrow {
+            color: #fff;
+            font-size: 20px;
+
+            &:hover {
+                color: #b19777;
+            }
+        }
+
+        .arrow {
+            width: 20px;
+            height: 20px;
+            margin: 0 auto;
+
+            &:hover {
+                border-color: #b19777;
+            }
+        }
+    }
+}
+
+/* ===================================== */
+/*         CLIENT SECTION STYLE          */
+/* ===================================== */
+
+.client {
+    margin-top: 100px;
+
+    &_slider {
+        border-top: 1px solid #282828;
+        border-bottom: 1px solid #282828;
+
+        .slick-slide {
+            margin-right: 15px;
+        }
+    }
+
+    &_item {
+        padding: 0 20px;
+        border-right: 1px solid #282828;
+        margin: 20px 0;
+
+        img {
+            height: 80px;
+        }
+    }
+}

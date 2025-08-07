@@ -1,0 +1,37 @@
+.header {
+    padding: 21px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    z-index: 99;
+
+    &_logo {
+        img {
+            max-width: 150px;
+        }
+    }
+
+    &_menu {
+        margin-left: auto;
+
+        ul {
+            @include verticalCenter;
+            column-gap: 55px;
+
+            li {
+
+                a {
+                    padding: 8px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: #ffffff8c;
+                    text-transform: uppercase;
+                }
+            }
+
+        }
+    }
+}
