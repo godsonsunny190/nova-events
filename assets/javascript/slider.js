@@ -5,8 +5,8 @@
 $(".projects_slider").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
-  // autoplay: true,
-  // autoplaySpeed: 2000,
+  autoplay: true,
+  autoplaySpeed: 2000,
   arrows: false,
   rows: 2,
 });
@@ -18,5 +18,11 @@ $(".projects_slider").slick({
 $(".client_slider").slick({
   infinite: true,
   slidesToShow: 7,
-  slidesToScroll: 4,
+  slidesToScroll: 1,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 0,
+  speed: 4000,
+  pauseOnHover: false,
+  cssEase: "linear",
 });

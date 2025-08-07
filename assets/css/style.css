@@ -12033,6 +12033,30 @@ img {
 .service_item:hover .service_image img {
   transform: scale(1.1);
 }
+.service_item:hover .arrow {
+  transform: rotate(0deg);
+  transition: all 0.4s ease;
+  opacity: 1;
+}
+.service_item .arrow {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  z-index: 1;
+  background-color: #c5a47e;
+  opacity: 0;
+  transform: rotate(-45deg);
+}
+.service_item .arrow img {
+  max-width: 20px;
+}
 .service_image img {
   transition: all 0.5s ease 0s;
   height: 430px;
@@ -12097,6 +12121,7 @@ img {
 }
 .projects_item img {
   transition: all 0.5s;
+  min-height: 382px;
 }
 .projects_item .line {
   text-align: center;
@@ -12148,6 +12173,7 @@ img {
   width: 20px;
   height: 20px;
   margin: 0 auto;
+  min-height: 20px;
 }
 .projects_content .arrow:hover {
   border-color: #b19777;
