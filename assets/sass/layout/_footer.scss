@@ -1,35 +1,121 @@
 .footer {
-    padding: 24px 0;
-    background-color: rgba(255, 255, 255, 0.0509803922);
-    margin-top: 100px;
+    padding: 30px 0 0;
+    margin-top: 50px;
+    position: relative;
+    background-color: #000000;
+    color: #fff;
 
-    &_flex {
+    &_wrapper {
         @include flexBetween;
+        align-items: flex-start;
+        column-gap: 50px;
+        padding: 50px 0;
     }
 
-    &_copyright {
-        color: #fff;
+    &_about {
+        color: rgba(255, 255, 255, 0.7);
+        width: 30%;
 
-        a {
-            color: #fff
+        p {
+            margin-top: 25px;
+        }
+
+        .logo img {
+            height: 45px;
+            max-width: 276px;
+            object-fit: contain;
+            transition: all 0.3s ease-out;
         }
     }
 
     &_links {
+        width: calc(70% / 3);
 
         ul {
-            @include verticalCenter;
-            column-gap: 24px;
 
             li {
-                a {
+                margin-bottom: 14px;
+                line-height: 22px;
+
+                &:hover {
                     color: #fff;
-                    font-size: 16px;
-                    font-family: 400;
+                }
+
+                a {
+                    color: rgba(255, 255, 255, 0.7);
+                    font-size: 15px;
+                    font-weight: 400;
+                    position: relative;
+                    z-index: 1;
+
+                    &:hover {
+                        color: #c5a47e;
+                    }
                 }
             }
         }
 
+        h6 {
+            color: #fff;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            font-weight: 500;
+            line-height: 32px;
+        }
 
+    }
+
+
+
+    .sub-footer {
+        padding: 20px 0;
+        border-top: 1px solid #282828;
+
+        p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0;
+
+            a {
+                color: rgba(255, 255, 255, 0.7);
+
+                &:hover {
+                    color: #c5a47e;
+                }
+            }
+
+            span {
+                color: rgba(255, 255, 255, 0.1);
+                padding: 0 10px;
+            }
+        }
+
+        .text-right-left {
+            text-align: right !important;
+        }
+    }
+
+    .logo {
+        h2 {
+            font-weight: normal;
+            font-size: 30px;
+            color: #fff;
+            line-height: 1.25em;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        span {
+            display: block;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 9px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 400;
+            line-height: 1.25em;
+        }
     }
 }

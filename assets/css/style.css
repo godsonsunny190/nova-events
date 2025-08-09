@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -12048,6 +12049,8 @@ img {
   z-index: -1;
   width: 100%;
   height: 100%;
+  pointer-events: none;
+  user-select: none;
 }
 
 .bg-lines .bg-line-1,
@@ -12178,30 +12181,101 @@ img {
 }
 
 .footer {
-  padding: 24px 0;
-  background-color: rgba(255, 255, 255, 0.0509803922);
-  margin-top: 100px;
+  padding: 30px 0 0;
+  margin-top: 50px;
+  position: relative;
+  background-color: #000000;
+  color: #fff;
 }
-.footer_flex {
+.footer_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-items: flex-start;
+  column-gap: 50px;
+  padding: 50px 0;
 }
-.footer_copyright {
+.footer_about {
+  color: rgba(255, 255, 255, 0.7);
+  width: 30%;
+}
+.footer_about p {
+  margin-top: 25px;
+}
+.footer_about .logo img {
+  height: 45px;
+  max-width: 276px;
+  object-fit: contain;
+  transition: all 0.3s ease-out;
+}
+.footer_links {
+  width: 23.3333333333%;
+}
+.footer_links ul li {
+  margin-bottom: 14px;
+  line-height: 22px;
+}
+.footer_links ul li:hover {
   color: #fff;
-}
-.footer_copyright a {
-  color: #fff;
-}
-.footer_links ul {
-  display: flex;
-  align-items: center;
-  column-gap: 24px;
 }
 .footer_links ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+.footer_links ul li a:hover {
+  color: #c5a47e;
+}
+.footer_links h6, .footer_links .h6 {
   color: #fff;
-  font-size: 16px;
-  font-family: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.footer .sub-footer {
+  padding: 20px 0;
+  border-top: 1px solid #282828;
+}
+.footer .sub-footer p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0;
+}
+.footer .sub-footer p a {
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer .sub-footer p a:hover {
+  color: #c5a47e;
+}
+.footer .sub-footer p span {
+  color: rgba(255, 255, 255, 0.1);
+  padding: 0 10px;
+}
+.footer .sub-footer .text-right-left {
+  text-align: right !important;
+}
+.footer .logo h2, .footer .logo .h2 {
+  font-weight: normal;
+  font-size: 30px;
+  color: #fff;
+  line-height: 1.25em;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+.footer .logo span {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 9px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.25em;
 }
 
 /* ===================================== */
@@ -12532,20 +12606,9 @@ img {
 .contact {
   margin-top: 100px;
 }
-.contact__wrapper {
-  display: flex;
-  padding: 20px 84px;
-  align-items: center;
-  gap: 30px;
-  border: 2px solid rgba(10, 13, 23, 0.05);
-  backdrop-filter: blur(190px);
-  box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.04);
-  flex-direction: row-reverse;
-}
-
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .contact {
+    margin-top: 50px;
     flex-direction: column;
     width: 100%;
     height: auto;
@@ -12553,122 +12616,73 @@ img {
     gap: 20px;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 767.98px) {
   .contact {
     padding: 15px;
     gap: 15px;
   }
 }
-.contact__form-section {
+.contact_wrapper {
+  display: flex;
+  padding: 20px 84px;
+  align-items: center;
+  gap: 30px;
+  border: 2px solid rgba(10, 13, 23, 0.05);
+  backdrop-filter: blur(190px);
+  background-color: #151515;
+  flex-direction: row-reverse;
+}
+.contact_section {
   display: flex;
   padding: 40px;
   flex-direction: column;
-  align-items: flex-start;
   gap: 41px;
   flex: 1;
 }
-
-@media (max-width: 991px) {
-  .contact__form-section {
+@media (max-width: 991.98px) {
+  .contact_section {
     padding: 20px;
     width: 100%;
   }
 }
 @media (max-width: 640px) {
-  .contact__form-section {
+  .contact_section {
     padding: 15px;
   }
 }
-.contact__header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  width: 100%;
-}
-
-.contact__title {
-  width: 426px;
-  line-height: 48px;
-  color: #FFF;
-  letter-spacing: -0.6px;
-  margin: 0;
-}
-
-@media (max-width: 991px) {
-  .contact__title {
-    width: 100%;
-    font-size: 26px;
-  }
-}
-@media (max-width: 640px) {
-  .contact__title {
-    font-size: 22px;
-  }
-}
-.contact__subtitle {
-  width: 415px;
-  color: #FFF;
-  letter-spacing: -0.16px;
-  opacity: 0.8;
-  margin: 0;
-}
-
-@media (max-width: 991px) {
-  .contact__subtitle {
-    width: 100%;
-    font-size: 15px;
-  }
-}
-@media (max-width: 640px) {
-  .contact__subtitle {
-    font-size: 14px;
-  }
-}
-.contact__form {
+.contact_form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 14px;
   width: 100%;
 }
-
-.contact__name-fields {
+.contact_name {
   display: flex;
   align-items: flex-start;
   gap: 14px;
   width: 100%;
 }
-
-@media (max-width: 640px) {
-  .contact__name-fields {
+@media (max-width: 767.98px) {
+  .contact_name {
     flex-direction: column;
   }
 }
-.contact__input-group {
-  display: flex;
+.contact_input {
   padding: 12px 14px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 10px;
-  border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   flex: 1 0 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.05);
+  font-size: 16px;
+  font-weight: 400;
 }
-
-@media (max-width: 640px) {
-  .contact__input-group {
+@media (max-width: 767.98px) {
+  .contact_input {
     width: 100%;
   }
 }
-.contact__input-group--message {
-  height: 109px;
-}
-
-.contact__input {
+.contact_input input {
   background: transparent;
   border: none;
   outline: none;
@@ -12676,12 +12690,10 @@ img {
   letter-spacing: -0.15px;
   width: 100%;
 }
-
-.contact__input::placeholder {
+.contact_input input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-
-.contact__textarea {
+.contact_input textarea {
   background: transparent;
   border: none;
   outline: none;
@@ -12689,90 +12701,10 @@ img {
   letter-spacing: -0.15px;
   width: 100%;
   resize: none;
-  height: 85px;
+  height: 109px;
 }
-
-.contact__textarea::placeholder {
+.contact_input textarea::placeholder {
   color: rgba(255, 255, 255, 0.6);
-}
-
-.contact__button-icon {
-  width: 12px;
-  height: 25px;
-  transform: rotate(90deg);
-  mix-blend-mode: screen;
-}
-
-.contact__image-section {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  position: relative;
-}
-
-@media (max-width: 991px) {
-  .contact__image-section {
-    width: 100%;
-  }
-}
-.contact__image-container {
-  position: relative;
-}
-
-.contact__hero-image {
-  width: 516px;
-  display: block;
-}
-
-@media (max-width: 991px) {
-  .contact__hero-image {
-    width: 100%;
-    height: auto;
-    max-width: 500px;
-  }
-}
-.contact__testimonial-overlay {
-  display: flex;
-  width: 466px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
-  position: absolute;
-  bottom: 48px;
-  right: 22px;
-}
-
-@media (max-width: 991px) {
-  .contact__testimonial-overlay {
-    position: static;
-    width: 100%;
-    margin-top: 10px;
-  }
-}
-.contact__testimonial-quote {
-  color: #FFF;
-  letter-spacing: -0.16px;
-  opacity: 0.7;
-  margin: 0;
-  font-style: normal;
-}
-
-@media (max-width: 640px) {
-  .contact__testimonial-quote {
-    font-size: 14px;
-  }
-}
-.contact__testimonial-author {
-  color: #FFF;
-  letter-spacing: -0.16px;
-  opacity: 0.8;
-}
-
-@media (max-width: 640px) {
-  .contact__testimonial-author {
-    font-size: 14px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
