@@ -327,7 +327,7 @@
 
             h5 {
                 color: #fff;
-                font-size: 20px;
+                font-size: 22px;
                 font-weight: 600;
             }
 
@@ -336,6 +336,7 @@
                 font-size: 16px;
                 font-weight: 400;
                 margin-top: 10px;
+                font-family: $font-lato;
             }
 
         }
@@ -372,7 +373,7 @@
 
         &:hover {
 
-            &::after {
+            &.img::after {
                 height: 250%;
                 transition: all 600ms linear;
                 background-color: transparent;
@@ -389,8 +390,9 @@
     }
 }
 
-
-
+/* ===================================== */
+/*         CONTACT SECTION STYLE         */
+/* ===================================== */
 .contact {
     margin-top: 100px;
 
@@ -494,6 +496,15 @@
             &::placeholder {
                 color: rgba(255, 255, 255, 0.60);
             }
+        }
+    }
+
+    &_image {
+        width: 42%;
+
+        img {
+            height: 510px;
+            object-position: top;
         }
     }
 

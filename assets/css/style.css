@@ -12197,7 +12197,7 @@ img {
   border-bottom: 1px solid #282828;
 }
 .footer_about {
-  color: rgba(255, 255, 255, 0.7);
+  color: #ffffff;
   width: 30%;
 }
 .footer_about p {
@@ -12595,7 +12595,7 @@ img {
 }
 .equipment_item .cont h5, .equipment_item .cont .h5 {
   color: #fff;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
 }
 .equipment_item .cont h6, .equipment_item .cont .h6 {
@@ -12603,6 +12603,7 @@ img {
   font-size: 16px;
   font-weight: 400;
   margin-top: 10px;
+  font-family: "Lato", sans-serif;
 }
 .equipment_item .img {
   position: relative;
@@ -12631,7 +12632,7 @@ img {
   z-index: 1;
   transition: all 0.3s ease-in-out;
 }
-.equipment_item:hover::after {
+.equipment_item:hover.img::after {
   height: 250%;
   transition: all 600ms linear;
   background-color: transparent;
@@ -12643,6 +12644,9 @@ img {
   column-gap: 12px;
 }
 
+/* ===================================== */
+/*         CONTACT SECTION STYLE         */
+/* ===================================== */
 .contact {
   margin-top: 100px;
 }
@@ -12745,6 +12749,13 @@ img {
 }
 .contact_input textarea::placeholder {
   color: rgba(255, 255, 255, 0.6);
+}
+.contact_image {
+  width: 42%;
+}
+.contact_image img {
+  height: 510px;
+  object-position: top;
 }
 
 /*# sourceMappingURL=style.css.map */
