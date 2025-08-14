@@ -11,11 +11,21 @@
         column-gap: 50px;
         padding: 50px 0;
         border-bottom: 1px solid #282828;
+        row-gap: 50px;
+
+        @include media-breakpoint-down(lg) {
+            flex-wrap: wrap;
+            column-gap: 24px;
+        }
     }
 
     &_about {
         color: #ffffff;
         width: 30%;
+
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+        }
 
         p {
             margin-top: 25px;
@@ -32,6 +42,10 @@
     &_links {
         width: calc(70% / 3);
 
+        @include media-breakpoint-down(md) {
+            width: calc(90% / 2);
+        }
+
         ul {
             li {
                 margin-bottom: 14px;
@@ -39,11 +53,15 @@
 
                 a {
                     color: #ffffff;
-                    font-size: 15px;
+                    font-size: 16px;
                     font-weight: 400;
                     position: relative;
                     z-index: 1;
                     transition: transform 0.25s ease-out;
+
+                    @include media-breakpoint-down(lg) {
+                        font-size: 14px;
+                    }
 
                     &::after {
                         content: '';
@@ -80,7 +98,10 @@
             letter-spacing: 1px;
             margin-bottom: 15px;
             font-weight: 500;
-            line-height: 32px;
+
+            @include media-breakpoint-down(lg) {
+                font-size: 18px;
+            }
         }
 
         .social-links {
@@ -118,8 +139,12 @@
         padding: 20px 0;
 
         p {
-            font-size: 15px;
+            font-size: 16px;
             color: #fff;
+
+            @include media-breakpoint-down(lg) {
+                font-size: 14px;
+            }
 
             a {
                 color: #fff;

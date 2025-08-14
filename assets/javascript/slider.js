@@ -28,13 +28,15 @@ $(".projects_slider").slick({
       breakpoint: 767,
       settings: {
         slidesToShow: 2,
+        rows: 1,
       },
     },
 
     {
       breakpoint: 578,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 1.5,
+        rows: 1,
       },
     },
   ],
@@ -54,4 +56,32 @@ $(".client_slider").slick({
   speed: 4000,
   pauseOnHover: false,
   cssEase: "linear",
+
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 5,
+      },
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 4,
+      },
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+
+    {
+      breakpoint: 578,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+  ],
 });

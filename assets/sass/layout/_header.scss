@@ -10,6 +10,10 @@
     &_logo {
         img {
             max-width: 150px;
+
+            @include media-breakpoint-down(sm) {
+                max-width: 100px;
+            }
         }
     }
 
@@ -39,6 +43,15 @@
                 }
             }
 
+        }
+    }
+
+    .navbar {
+        &-toggler {
+            img {
+                width: 24px;
+                height: 24px;
+            }
         }
     }
 }
