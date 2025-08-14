@@ -5,8 +5,8 @@
 $(".projects_slider").slick({
   slidesToShow: 4,
   slidesToScroll: 3,
-  autoplay: true,
-  autoplaySpeed: 2000,
+  // autoplay: true,
+  // autoplaySpeed: 2000,
   arrows: false,
   rows: 2,
   dots: true,

@@ -21,11 +21,24 @@
         width: max-content;
         color: $white-color;
         text-align: center;
+        padding: 0 16px;
 
         h1 {
             font-size: 60px;
             font-weight: 600;
             text-transform: uppercase;
+
+            @include media-breakpoint-down(lg) {
+                font-size: 50px;
+            }
+
+            @include media-breakpoint-down(md) {
+                font-size: 40px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 30px;
+            }
 
         }
 
@@ -34,6 +47,15 @@
             font-weight: 600;
             text-transform: uppercase;
             margin-top: 8px;
+
+            @include media-breakpoint-down(md) {
+                font-size: 30px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 20px;
+            }
+
 
             b {
                 color: $color-7e;
@@ -180,7 +202,7 @@
             font-size: 20px;
             font-weight: 600;
             color: #ffffff;
-            text-transform: capitalize;
+            font-family: $font-hanken;
 
             @include media-breakpoint-down(md) {
                 font-size: 18px;
@@ -196,6 +218,7 @@
             font-size: 14px;
             font-weight: 400;
             color: $color-7e;
+            font-family: $font-hanken;
         }
     }
 }
@@ -262,6 +285,44 @@
             transition: all 0.3s ease-in-out;
             margin: 0 auto 30px;
         }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(360deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 105%);
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+
+    &_location {
+        display: flex;
+        align-items: center;
+        color: white;
+        column-gap: 6px;
+        position: absolute;
+        top: 16px;
+        right: 22px;
+        color: #c5a47e;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: $font-hanken;
+        z-index: 2;
+        border-radius: 30px;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        padding: 4px 14px;
+
+        img {
+            min-height: 17px;
+            width: 17px;
+            height: 17px;
+        }
     }
 
     &_content {
@@ -283,8 +344,6 @@
             font-size: 14px;
             font-weight: 400;
             margin: 0 0 10px 0;
-            letter-spacing: 5px;
-            text-transform: uppercase;
             line-height: 26px;
 
             @include media-breakpoint-down(sm) {
@@ -298,9 +357,7 @@
             font-size: 20px;
             font-weight: 500;
             margin: 0 0 10px 0;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-
+            font-family: $font-hanken;
 
             @include media-breakpoint-down(md) {
                 font-size: 18px;
@@ -371,6 +428,14 @@
         grid-template-columns: repeat(3, 1fr);
         margin-top: 40px;
         gap: 16px;
+
+        @include media-breakpoint-down(lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media-breakpoint-down(md) {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     &_item {
@@ -402,6 +467,7 @@
                 color: #fff;
                 font-size: 22px;
                 font-weight: 600;
+                font-family: $font-hanken;
             }
 
             h6 {
@@ -409,7 +475,7 @@
                 font-size: 16px;
                 font-weight: 400;
                 margin-top: 10px;
-                font-family: $font-lato;
+                font-family: $font-hanken;
                 letter-spacing: 0.3px;
                 line-height: 24px
             }
@@ -417,6 +483,7 @@
 
         .img {
             position: relative;
+            overflow: hidden;
 
             &::after {
                 content: "";
@@ -447,7 +514,7 @@
 
         &:hover {
 
-            &.img::after {
+            .img::after {
                 height: 250%;
                 transition: all 600ms linear;
                 background-color: transparent;
@@ -462,23 +529,6 @@
         align-items: center;
         column-gap: 12px;
     }
-}
-
-/* ===================================== */
-/*           CTA SECTION STYLE           */
-/* ===================================== */
-
-.cta-container {
-    width: 1104px;
-    height: 280px;
-    border-radius: 24px;
-    background: linear-gradient(90deg,
-            rgba(0, 0, 0, 0) 0%,
-            rgba(25, 25, 25, 0.9) 50%,
-            rgba(0, 0, 0, 0) 100%);
-    position: relative;
-    margin: 0 auto;
-    overflow: hidden;
 }
 
 
@@ -564,8 +614,6 @@
         flex: 1 0 0;
         width: 100%;
         background-color: rgba(255, 255, 255, 0.05);
-        font-size: 16px;
-        font-weight: 400;
 
         @include media-breakpoint-down(md) {
             width: 100%;
@@ -578,6 +626,9 @@
             color: rgba(255, 255, 255, 0.60);
             letter-spacing: -0.15px;
             width: 100%;
+            font-family: $font-hanken;
+            font-size: 14px;
+            font-weight: 400;
 
             &::placeholder {
                 color: rgba(255, 255, 255, 0.60);
@@ -593,6 +644,8 @@
             width: 100%;
             resize: none;
             height: 109px;
+            font-size: 14px;
+            font-weight: 400;
 
             &::placeholder {
                 color: rgba(255, 255, 255, 0.60);
@@ -614,7 +667,3 @@
     }
 
 }
-
-/* ===================================== */
-/*           CTA SECTION STYLE           */
-/* ===================================== */
