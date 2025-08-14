@@ -1,3 +1,6 @@
+<?php include('includes/header.php');?>
+<main>
+
 <!-- HERO SECTION STARTS HERE -->
 <section class="hero">
     <div class="hero_video">
@@ -533,6 +536,7 @@
 </section>
 <!-- CONTACT SECTION ENDS HERE -->
 
-
+</main>
+<?php include('includes/footer.php');?>
 
 

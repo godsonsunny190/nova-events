@@ -21,8 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
 
     <!-- FONT STYLE LINK -->
-    <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
-    <link rel="stylesheet" href="./assets/css/style.css.map">
+    <link rel="stylesheet" href="./assets/css/styleheet.css">
 
     <!-- CSS LINK -->
     <link rel="stylesheet" href="./assets/css/style.css">
