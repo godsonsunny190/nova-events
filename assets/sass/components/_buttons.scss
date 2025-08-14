@@ -8,10 +8,11 @@
     line-height: 1em;
     text-transform: capitalize;
     border: none;
-    padding: 17px 54px 17px 24px;
+    padding: 13px 24px;
     transition: all 0.5s ease-in-out;
     overflow: hidden;
     z-index: 0;
+    font-family: $font-hanken;
 
     &.btn-highlighted {
         background-color: #c5a47e;
@@ -35,20 +36,20 @@
     }
 
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: 0;
-        width: 16px;
-        height: 16px;
-        background-image: url(../images/index/arrow-white.svg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        transform: translate(-20px, -50%);
-        transition: all 0.4s ease-in-out;
-    }
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 50%;
+    //     right: 0;
+    //     width: 16px;
+    //     height: 16px;
+    //     background-image: url(../images/index/arrow-white.svg);
+    //     background-repeat: no-repeat;
+    //     background-position: center center;
+    //     background-size: cover;
+    //     transform: translate(-20px, -50%);
+    //     transition: all 0.4s ease-in-out;
+    // }
 
     &:hover {
         background: transparent;

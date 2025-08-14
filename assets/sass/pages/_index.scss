@@ -439,7 +439,7 @@
     }
 
     &_item {
-        background-color: rgba(255, 255, 255, 0.04);
+        background-color: #0B0C0C;
         padding: 15px;
 
         .cont {
@@ -558,8 +558,7 @@
         align-items: center;
         gap: 30px;
         border: 2px solid rgba(10, 13, 23, 0.05);
-        backdrop-filter: blur(190px);
-        background-color: rgba(255, 255, 255, 0.04);
+        background-color: #0B0C0C;
         flex-direction: row-reverse;
 
         @include media-breakpoint-down(xl) {
@@ -655,6 +654,8 @@
 
     &_image {
         width: 42%;
+        position: relative;
+        overflow: hidden;
 
         @include media-breakpoint-down(lg) {
             width: 100%;
@@ -664,6 +665,40 @@
             height: 510px;
             object-position: top;
         }
-    }
 
+        &::after {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 0%;
+            left: 50%;
+            top: 50%;
+            background-color: rgba(255, 255, 255, .3);
+            transform: translate(-50%, -50%) rotate(-45deg);
+            z-index: 1;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(360deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 105%);
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+
+            &::after {
+                height: 250%;
+                transition: all 600ms linear;
+                background-color: transparent;
+            }
+        }
+    }
 }

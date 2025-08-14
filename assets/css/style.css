@@ -12070,10 +12070,11 @@ img {
   line-height: 1em;
   text-transform: capitalize;
   border: none;
-  padding: 17px 54px 17px 24px;
+  padding: 13px 24px;
   transition: all 0.5s ease-in-out;
   overflow: hidden;
   z-index: 0;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 .btn-default.btn-highlighted {
   background-color: #c5a47e;
@@ -12093,20 +12094,6 @@ img {
   transform: skew(45deg);
   transition: all 0.4s ease-in-out;
   z-index: -1;
-}
-.btn-default::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 16px;
-  height: 16px;
-  background-image: url(../images/index/arrow-white.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  transform: translate(-20px, -50%);
-  transition: all 0.4s ease-in-out;
 }
 .btn-default:hover {
   background: transparent;
@@ -12233,6 +12220,17 @@ img {
     top: 100%;
   }
 }
+/* ===================================== */
+/*         BANNER SECTION STYLE          */
+/* ===================================== */
+.banner {
+  min-height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
 .header {
   padding: 21px 0;
   position: absolute;
@@ -12370,10 +12368,12 @@ img {
 }
 .footer_col a:hover {
   transition: 0.5s all ease-in-out;
+  color: #c5a47e;
 }
 .footer_col a:hover img {
   transform: rotate(-45deg);
   transition: 0.5s all ease-in-out;
+  filter: brightness(0) saturate(100%) invert(68%) sepia(41%) saturate(277%) hue-rotate(352deg) brightness(92%) contrast(92%);
 }
 .footer_flexCenter {
   display: flex;
@@ -12485,7 +12485,7 @@ img {
 }
 .footer_links ul li a::after {
   content: "";
-  border-bottom: solid 2px #D9D9D9;
+  border-bottom: solid 2px #c5a47e;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -12496,6 +12496,9 @@ img {
 }
 .footer_links ul li a.primary-btn::after {
   content: none;
+}
+.footer_links ul li a:hover {
+  color: #c5a47e;
 }
 .footer_links ul li a:hover::after {
   transform-origin: left;
@@ -12552,18 +12555,20 @@ img {
     order: 2;
   }
 }
-.footer_flexBottom h6 img, .footer_flexBottom .h6 img {
-  width: 64px;
-  height: 14px;
-  margin-top: -5px;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  object-fit: contain;
+.footer_flexBottom h6 a:hover, .footer_flexBottom .h6 a:hover {
+  color: #c5a47e;
 }
-.footer_flexBottom h6 img:hover, .footer_flexBottom .h6 img:hover {
-  transition: 0.5s all ease-in-out;
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
+.footer_flexBottom h6 a:hover::after, .footer_flexBottom .h6 a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+@keyframes a {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 .footer_flexBottom ul {
   display: flex;
@@ -12993,7 +12998,7 @@ img {
   }
 }
 .equipment_item {
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: #0B0C0C;
   padding: 15px;
 }
 .equipment_item .cont {
@@ -13097,8 +13102,7 @@ img {
   align-items: center;
   gap: 30px;
   border: 2px solid rgba(10, 13, 23, 0.05);
-  backdrop-filter: blur(190px);
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: #0B0C0C;
   flex-direction: row-reverse;
 }
 @media (max-width: 1199.98px) {
@@ -13191,6 +13195,8 @@ img {
 }
 .contact_image {
   width: 42%;
+  position: relative;
+  overflow: hidden;
 }
 @media (max-width: 991.98px) {
   .contact_image {
@@ -13200,6 +13206,35 @@ img {
 .contact_image img {
   height: 510px;
   object-position: top;
+}
+.contact_image::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  z-index: 1;
+}
+.contact_image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 105%);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+.contact_image:hover::after {
+  height: 250%;
+  transition: all 600ms linear;
+  background-color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
