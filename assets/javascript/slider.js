@@ -10,6 +10,34 @@ $(".projects_slider").slick({
   arrows: false,
   rows: 2,
   dots: true,
+
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+
+    {
+      breakpoint: 578,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 });
 
 /* ===================================== */
