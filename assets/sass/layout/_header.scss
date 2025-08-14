@@ -20,6 +20,13 @@
             @include verticalCenter;
             column-gap: 55px;
 
+            @include media-breakpoint-down(lg) {
+                column-gap: 30px;
+                @include flexColumn;
+                row-gap: 20px;
+                align-items: flex-start;
+            }
+
             li {
 
                 a {
